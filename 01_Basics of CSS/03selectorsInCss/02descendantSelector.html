@@ -1,0 +1,35 @@
+<!-- 
+    The descendant selector in CSS is used to select elements that are nested (or descendants) within another element. The selector is written by separating the ancestor and descendant elements with a space.
+    HINDI : CSS में descendant selector का उपयोग उन तत्वों का चयन करने के लिए किया जाता है जो किसी अन्य तत्व के अंदर होते हैं। इस चयनकर्ता को लिखते समय पूर्वज (ancestor) और वंशज (descendant) तत्वों के बीच एक स्पेस रखा जाता है।
+
+    Syntax : 
+    ancestor descendant {
+       /* CSS properties */
+     }
+
+    This means that the styles will apply to all descendant elements that are inside the ancestor element.
+
+
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendant Selector Example</title>
+    <style>
+        /* CSS using Descendant Selector */
+        div p {
+            color: blue; /* All <p> inside <div> will be blue */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This paragraph is inside a div.</p>
+        <span>This span is inside a div.</span>
+    </div>
+    <p>This paragraph is not inside a div.</p>
+</body>
+</html>
