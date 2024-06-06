@@ -1,0 +1,25 @@
+#CSS Introduction
+
+What is CSS?
+CSS stands for Cascading Style Sheets. It is used to make web pages look nice. HTML is used to create the structure of a web page, and CSS is used to change how it looks.
+
+Why Use CSS?
+
+Style and Design: CSS makes your web pages look better with colors, fonts, and layouts.
+Reuse Styles: You can use the same CSS styles on many web pages.
+Easy Changes: You can change the look of your website easily by changing the CSS file.
+Basic Example:
+
+HTML: This is your content.
+CSS: This is how your content looks.
+html
+Copy code
+<!-- HTML Example -->
+<p>This is a paragraph.</p>
+css
+Copy code
+/* CSS Example */
+p {
+    color: blue;  /* Makes the text blue */
+    font-size: 16px;  /* Makes the text size 16 pixels */
+}
