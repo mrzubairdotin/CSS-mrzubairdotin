@@ -1,0 +1,31 @@
+<!-- 
+Adjacent Sibling Selector (+) in CSS
+The adjacent sibling selector (+) is used to select an element that is immediately next to another element.
+
+इस उदाहरण में:
+
+CSS नियम h1 + p { color: blue; } उस पहले <p> तत्व पर लागू होगा जो <h1> तत्व के तुरंत बाद आता है।
+पहला पैराग्राफ नीला होगा क्योंकि यह <h1> के तुरंत बाद आता है।
+दूसरा पैराग्राफ प्रभावित नहीं होगा क्योंकि यह <h1> के तुरंत बाद नहीं आता।
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Adjacent Sibling Selector</title>
+     <style>
+         h1 + p {
+             color: blue;
+         }
+     </style>
+ </head>
+ <body>
+     <h1>This is a heading</h1>
+     <p>This paragraph is immediately after the heading and will be blue.</p>
+     <p>This paragraph will not be affected.</p>
+ </body>
+ </html>
+ 
