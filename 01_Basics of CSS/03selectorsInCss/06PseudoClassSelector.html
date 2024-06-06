@@ -1,0 +1,87 @@
+<!-- 
+A pseudo-class selector in CSS is used to define a special state of an element. For example, it can be used to style an element when the user hovers over it, when it is the first child of its parent, or when a link has been visited.
+HINDI : CSS में pseudo-class selector का उपयोग किसी तत्व की विशेष स्थिति को परिभाषित करने के लिए किया जाता है। उदाहरण के लिए, इसका उपयोग तब किया जा सकता है जब उपयोगकर्ता किसी तत्व पर होवर करता है, जब वह अपने पैरेंट का पहला बच्चा होता है, या जब एक लिंक विजिट किया गया हो।
+
+Common Pseudo-classes
+:hover: Styles an element when the user hovers over it.
+The :hover pseudo-class is used in CSS to apply styles to an element when the user places (hovers) the mouse pointer over it. This is often used for links, buttons, and interactive elements to provide visual feedback when the user interacts with them.
+HINDI : CSS में :hover pseudo-class का उपयोग तब किया जाता है जब उपयोगकर्ता माउस पॉइंटर को किसी तत्व पर ले जाता है (hover करता है)। यह अक्सर लिंक, बटन और इंटरएक्टिव तत्वों के लिए उपयोग किया जाता है ताकि जब उपयोगकर्ता उनके साथ इंटरैक्ट करता है, तो उन्हें विजुअल फीडबैक दिया जा सके।
+
+:first-child: Styles an element that is the first child of its parent.
+The :first-child pseudo-class in CSS is used to select the first child element of its parent. This allows you to apply specific styles to the first child element, differentiating it from its siblings.
+HINDI : CSS में :first-child pseudo-class का उपयोग किसी पैरेंट के पहले बच्चे तत्व को चुनने के लिए किया जाता है। यह आपको पहले बच्चे तत्व पर विशेष स्टाइल लागू करने की अनुमति देता है, जिससे इसे उसके भाइयों से अलग दिखाया जा सकता है।
+
+:last-child: Styles an element that is the last child of its parent.
+
+:nth-child(n): Styles an element that is the nth child of its parent.
+
+:focus: Styles an element when it is focused (clicked or tabbed into).
+The :focus pseudo-class in CSS is used to apply styles to an element when it receives focus. An element gets focus when a user interacts with it, such as clicking on it or tabbing to it. Common elements that can receive focus include links (<a>), input fields (<input>), text areas (<textarea>), and buttons (<button>).
+HINDI : CSS में :focus pseudo-class का उपयोग किसी तत्व को फोकस होने पर स्टाइल करने के लिए किया जाता है। जब उपयोगकर्ता किसी तत्व के साथ इंटरैक्ट करता है, जैसे कि उस पर क्लिक करता है या टैब करता है, तो वह तत्व फोकस प्राप्त करता है। सामान्य तत्व जो फोकस प्राप्त कर सकते हैं उनमें लिंक (<a>), इनपुट फ़ील्ड (<input>), टेक्स्ट एरिया (<textarea>), और बटन (<button>) शामिल हैं।
+
+
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .btn {
+    background-color: lightblue;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+    .btn:hover {
+    background-color: darkblue; /* Changes background color when hovered */
+    color: white; /* Changes text color when hovered */
+}
+
+li:first-child {
+            color: red; /* Changes text color to red */
+            font-weight: bold; /* Makes text bold */
+        }
+
+li:last-child {
+            color: blue; /* Changes text color to red */
+            font-weight: bold; /* Makes text bold */
+        }
+
+        ul li:nth-child(2n) {
+    color: green;
+}
+
+#focusBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+        }
+#focusBtn:focus {
+            border-color: green; /* Changes border color to green */
+            background-color: lightgreen; /* Changes background color */
+            outline: none; /* Removes the default outline */
+        }
+
+
+    </style>
+    <title>Hover Pseudo-class</title>
+ </head>
+ <body>
+    <button class="btn">Hover over me!</button>
+
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ul> 
+    <br>
+    <button id="focusBtn">Click or Tab to Focus</button>  
+ </body>
+ </html>
