@@ -1,0 +1,66 @@
+<!-- 
+#Select elements with a specific attribute and value
+What is an Attribute Selector with a Specific Attribute and Value?
+
+An attribute selector with a specific attribute and value is used to select HTML elements that have a certain attribute with a specific value. The syntax for this type of selector is [attribute="value"].
+HINDI : विशेष एट्रिब्यूट और मान वाला एट्रिब्यूट सिलेक्टर उन HTML तत्वों का चयन करने के लिए उपयोग किया जाता है जिनमें एक निश्चित एट्रिब्यूट और विशेष मान होता है। इस प्रकार के सिलेक्टर के लिए सिंटैक्स [attribute="value"] होता है।
+
+Example
+Imagine you have some input fields in your HTML, and you want to style only the ones that are of type "text".
+HINDI : मान लीजिए आपके HTML में कुछ इनपुट फील्ड्स हैं, और आप केवल उन फील्ड्स को स्टाइल करना चाहते हैं जिनका टाइप "text" है।
+
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Selects all input elements with type="text" */
+        input[type="text"] {
+        border: 2px solid blue; /* Adds a blue border */
+        padding: 5px;           /* Adds some padding */
+    }
+
+    /* Selects all elements with an 'href' attribute that starts with 'https' */
+      [href^="https"] {
+      color: green;
+    }
+
+
+    /* Selects all elements with a 'src' attribute that ends with '.jpg' */
+    [src$=".jpg"] {
+     border: 2px solid red;
+      }
+
+      /* Selects all elements with a class attribute that contains 'example' */
+    [class*="example"] {
+      font-weight: bold;
+      }
+
+
+
+
+    </style>
+    <title>Select elements with a specific attribute and value</title>
+ </head>
+ <body>
+    <input type="text" placeholder="Enter text here">
+    <input type="password" placeholder="Enter password here">
+    <input type="button" value="Submit">
+    <br>
+    <a href="https://www.google.com">Google</a>
+    <a href="http://www.facebook.com">Non-secure Link</a>
+    <br>
+    <img src="image.jpg" alt="Image">
+    <img src="image.png" alt="Image">
+    <br>
+    <p class="example-text">This text is bold.</p>
+    <p class="text-example">This text is also bold.</p>
+
+
+
+ </body>
+ </html>
