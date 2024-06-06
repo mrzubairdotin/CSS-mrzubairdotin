@@ -1,0 +1,88 @@
+<!-- 
+Pseudo-element Selector
+A pseudo-element selector in CSS is used to style a specific part of an element. Unlike pseudo-classes, which define special states of elements, pseudo-elements target specific parts of elements. For example, you can style the first letter or first line of a paragraph using pseudo-elements.
+HINDI : CSS में pseudo-element selector का उपयोग एक तत्व के विशेष हिस्से को स्टाइल करने के लिए किया जाता है। pseudo-classes के विपरीत, जो तत्वों की विशेष स्थितियों को परिभाषित करते हैं, pseudo-elements विशिष्ट तत्वों के विशेष हिस्सों को लक्षित करते हैं। उदाहरण के लिए, आप pseudo-elements का उपयोग करके पैराग्राफ के पहले अक्षर या पहली पंक्ति को स्टाइल कर सकते हैं।
+
+Common Pseudo-elements
+::first-line: Styles the first line of an element.
+The ::first-line pseudo-element in CSS is used to style the first line of a block-level element. This is particularly useful for adding stylistic touches to the initial line of text, making it stand out.
+HINDI : CSS में ::first-line pseudo-element का उपयोग ब्लॉक-लेवल तत्व की पहली पंक्ति को स्टाइल करने के लिए किया जाता है। यह विशेष रूप से उस प्रारंभिक पंक्ति को आकर्षक बनाने के लिए उपयोगी है।
+Let's say we want to style the first line of each paragraph to have a larger font size, a different color, and be bold.
+HINDI : मान लीजिए कि हम प्रत्येक पैराग्राफ की पहली पंक्ति को बड़ा फ़ॉन्ट आकार, अलग रंग और बोल्ड बनाना चाहते हैं।
+
+
+::first-letter: Styles the first letter of an element.
+
+::before: Inserts content before the content of an element.
+The ::before pseudo-element in CSS is used to insert content before the actual content of an element. This pseudo-element is often used to add decorative content, such as icons, images, or text, before the main content of an element.
+HINDI : CSS में ::before pseudo-element का उपयोग किसी तत्व की वास्तविक सामग्री के पहले सामग्री डालने के लिए किया जाता है। इस pseudo-element का उपयोग अक्सर सजावटी सामग्री जोड़ने के लिए किया जाता है, जैसे आइकन, चित्र या पाठ, मुख्य सामग्री के पहले।
+
+Example
+Let's say you want to add a decorative bullet before each list item in an unordered list (<ul>).
+
+
+
+::after: Inserts content after the content of an element.
+The ::after pseudo-element is used to insert content after the content of a specified element. This inserted content can be styled with CSS properties just like any other element. It is commonly used to add decorative elements, icons, or additional information that is not part of the document's main content.
+HINDI : ::after pseudo-element का उपयोग किसी विशेष तत्व की सामग्री के बाद सामग्री जोड़ने के लिए किया जाता है। इस जोड़ी गई सामग्री को अन्य तत्वों की तरह CSS गुणों के साथ स्टाइल किया जा सकता है। इसे आमतौर पर सजावटी तत्व, आइकन, या अतिरिक्त जानकारी जोड़ने के लिए उपयोग किया जाता है जो दस्तावेज़ की मुख्य सामग्री का हिस्सा नहीं होती है।
+
+The ::after pseudo-element must be used with the content property. If the content property is not specified, the ::after pseudo-element will not render anything.
+HINDI : ::after pseudo-element को content प्रॉपर्टी के साथ उपयोग करना आवश्यक है। यदि content प्रॉपर्टी निर्दिष्ट नहीं की जाती है, तो ::after pseudo-element कुछ भी प्रदर्शित नहीं करेगा।
+Example
+Let's consider adding a decorative symbol after every <h1> element in a document.
+
+
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+/* Styles the first letter of each paragraph */
+h2::first-letter {
+    font-size: 150%;
+    color: red;
+    font-weight: bold;
+}
+
+p::first-line {
+    font-size: 1.5em;
+    color: blue;
+    font-weight: bold;
+}
+
+        /* Adds a custom bullet before each list item */
+        ul.custom-bullets li::before {
+            content: "►"; /* Inserts a decorative bullet */
+            color: red;    /* Sets the bullet color */
+            margin-right: 10px; /* Adds space between bullet and text */
+        }
+
+        /* Adding a decorative symbol after each h1 element */
+        h2::after {
+            content: " ✨";
+            font-size: 1.5rem;
+            color: gold;
+        }
+
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <p>Welcome to mrzubair</p>
+    <p>Swagat hai appka mrzubairdotin me</p>
+
+    <h2>This is a pen</h2>
+    <h2>This is a ball</h2>
+    <h2>This is a cat</h2>
+    <ul class="custom-bullets">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+</html>
