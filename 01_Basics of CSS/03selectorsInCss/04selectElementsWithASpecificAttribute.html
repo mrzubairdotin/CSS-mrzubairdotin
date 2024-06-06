@@ -1,0 +1,30 @@
+<!-- 
+#Select elements with a specific attribute
+CSS attribute selectors are used to select elements based on the presence of a specific attribute. This allows you to apply styles to elements that have a certain attribute, regardless of the attribute's value.
+
+Syntax
+[attribute]: Selects all elements with the specified attribute.
+
+HINDI : CSS एट्रिब्यूट सिलेक्टर का उपयोग विशेष एट्रिब्यूट वाले तत्वों को चुनने के लिए किया जाता है। इससे आप उन तत्वों पर स्टाइल लागू कर सकते हैं जिनमें कोई विशेष एट्रिब्यूट होता है, चाहे उसका मान कुछ भी हो।
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       [data-info] {
+           color: blue;  /* Changes the text color to blue */
+              }
+  
+    </style>
+    <title>Specific Attribute Selector in CSS</title>
+ </head>
+ <body>
+
+    <p data-info="example">This paragraph has a data-info attribute.</p>
+    <p>This paragraph does not have the attribute.</p>
+
+ </body>
+ </html>
