@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Properties</title>
+</head>
+<body>
+
+    <h2 style="color: blue;">Text Color</h2>
+    <!-- color Sets the color of the text. -->
+
+    <h2 style="text-align: center;">Text Align</h2>
+    <!-- text-align => Sets the horizontal alignment of the text within an element.
+    left (default)
+    right
+    center
+    justify -->
+
+    <h2 style="text-decoration: underline;">Text Decoration</h2>
+    <!-- text-decoration => Adds decorations to the text.
+    one
+    underline
+    overline
+    line-through
+    blink (not widely supported) -->
+
+    <h2 style="text-transform: uppercase;">Text Transform</h2>
+    <!-- text-transform => Controls the capitalization of text.
+    none (default)
+    capitalize
+    uppercase
+    lowercase -->
+
+    <h2 style="letter-spacing: 8px;">Letter Spacing</h2>
+    <!-- letter-spacing => Sets the spacing between characters. -->
+
+    <h2 style="word-spacing: 10px;">This is word spacing</h2>
+    <!-- word-spacing => Sets the spacing between words. -->
+
+    <h2 style="line-height: 1.5;">Line Height</h2>
+    <!-- line-height प्रॉपर्टी का उपयोग CSS में टेक्स्ट की लाइनों के बीच की ऊंचाई (स्पेसिंग) को नियंत्रित करने के लिए किया जाता है। यह प्रॉपर्टी टेक्स्ट को पढ़ने में आसानी लाने और एक समान दिखने के लिए महत्वपूर्ण है। -->
+
+    <h2 style="text-shadow: 2px 2px 5px gray;"> Text Shadow</h2>
+    <!-- CSS में text-shadow: text-shadow प्रॉपर्टी का उपयोग टेक्स्ट में छाया (शैडो) जोड़ने के लिए किया जाता है। यह प्रॉपर्टी टेक्स्ट को अधिक आकर्षक और गहराई प्रदान करने के लिए उपयोग की जाती है। text-shadow प्रॉपर्टी को चार मान (values) की आवश्यकता होती है: क्षैतिज छाया (horizontal shadow), ऊर्ध्वाधर छाया (vertical shadow), धुंधलापन (blur radius), और छाया का रंग (color of the shadow)।
+
+    selector {
+        text-shadow: horizontal-shadow vertical-shadow blur-radius color;
+    }
+    horizontal-shadow: छाया को क्षैतिज दिशा में स्थानांतरित करता है।
+    vertical-shadow: छाया को ऊर्ध्वाधर दिशा में स्थानांतरित करता है।
+    blur-radius: छाया का धुंधलापन (धुंधला प्रभाव) निर्दिष्ट करता है।
+    color: छाया का रंग निर्दिष्ट करता है। -->
+
+    <!-- <div style=" white-space: nowrap; overflow: hidden; text-overflow: ellipsis;"> (Text Overflow)This is very long paragram. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iure vero nisi laborum placeat commodi, tempora officiis quaerat ipsa at cumque illum enim deleniti necessitatibus cum, expedita quia ipsam est?</div>
+    text-overflow => प्रॉपर्टी का उपयोग तब किया जाता है जब टेक्स्ट उसके कंटेनर के भीतर पूरी तरह से फिट नहीं होता है। यह प्रॉपर्टी निर्दिष्ट करती है कि टेक्स्ट कंटेनर की सीमाओं के बाहर जाने पर टेक्स्ट का क्या करना है। यह मुख्य रूप से तब उपयोगी होती है जब टेक्स्ट को एक निश्चित चौड़ाई वाले कंटेनर में रखा जाता है।
+
+    selector {
+        text-overflow: value;
+    }
+
+    value: इसमें दो मुख्य मान होते हैं: clip और ellipsis.
+    clip: यह अतिरिक्त टेक्स्ट को काट देता है और उसे प्रदर्शित नहीं करता।
+    ellipsis: यह अतिरिक्त टेक्स्ट को ... (तीन बिंदुओं) से बदल देता है, जिससे संकेत मिलता है कि और भी टेक्स्ट है जो दिखाई नहीं दे रहा है।
+
+    इस उदाहरण में, div के भीतर का टेक्स्ट है। चूंकि टेक्स्ट कंटेनर में पूरी तरह से फिट नहीं हो सकता, इसलिए अतिरिक्त टेक्स्ट ... से बदल दिया गया है।
+
+    white-space: nowrap;: यह टेक्स्ट को एक ही लाइन में रहने के लिए बाध्य करता है, ताकि वह लाइन ब्रेक न हो।
+    overflow: hidden;: यह अतिरिक्त टेक्स्ट को छुपा देता है, जिससे वह दिखाई नहीं देता।
+    text-overflow: ellipsis;: यह अतिरिक्त टेक्स्ट को ... (तीन बिंदुओं) से बदल देता है, जिससे संकेत मिलता है कि और भी टेक्स्ट है जो दिखाई नहीं दे रहा है।
+
+    इस प्रकार, text-overflow प्रॉपर्टी यह सुनिश्चित करती है कि जब टेक्स्ट बहुत लंबा हो और कंटेनर में फिट न हो, तो उसे उचित तरीके से संभाला जाए। -->
+
+    <h2 style="white-space: pre-line;">This is a pen.
+     This is a dog.</h2>
+    <!-- CSS में white-space => प्रॉपर्टी का उपयोग यह नियंत्रित करने के लिए किया जाता है कि टेक्स्ट में खाली स्थान (whitespace) और लाइन ब्रेक्स (line breaks) को कैसे संभाला जाए। यह प्रॉपर्टी विभिन्न प्रकार के व्हाइट-स्पेस व्यवहार को निर्धारित करने के लिए उपयोगी होती है।
+    selector {
+        white-space: value;
+    }
+    value: यह विभिन्न मान (values) ले सकता है जैसे normal, nowrap, pre, pre-wrap, और pre-line।
+    Values (मान):
+    normal:
+    व्हाइट-स्पेस को सामान्य तरीके से हैंडल करता है।
+    एक ही स्पेस को एक स्पेस की तरह और लाइन ब्रेक को इग्नोर करता है।
+    nowrap:
+    टेक्स्ट को एक लाइन में रखता है।
+    लाइन ब्रेक को इग्नोर करता है।
+    pre:
+    टेक्स्ट को वैसे ही दिखाता है जैसे लिखा गया है, जिसमें सभी स्पेसेज और लाइन ब्रेक शामिल होते हैं।
+    pre-wrap:
+    pre जैसा ही, लेकिन जरूरत पड़ने पर लाइन को ब्रेक करता है।
+    pre-line:
+    अतिरिक्त स्पेस को हटा देता है, लेकिन लाइन ब्रेक को बनाए रखता है।
+    normal:
+    अतिरिक्त स्पेस को हटा देता है।
+    लाइन ब्रेक को इग्नोर करता है।
+    nowrap:
+    टेक्स्ट को एक ही लाइन में रखता है, जिससे स्क्रोलिंग हो सकती है।
+    pre:
+    सभी स्पेस और लाइन ब्रेक को वैसे ही दिखाता है जैसे लिखा गया है।
+    pre-wrap:
+    सभी स्पेस और लाइन ब्रेक को दिखाता है और आवश्यक होने पर लाइन को ब्रेक करता है।
+    pre-line:
+    अतिरिक्त स्पेस को हटा देता है लेकिन लाइन ब्रेक को बनाए रखता है।
+    इस प्रकार, white-space प्रॉपर्टी का उपयोग करके आप यह नियंत्रित कर सकते हैं कि टेक्स्ट के अंदर खाली स्थान और लाइन ब्रेक को कैसे हैंडल किया जाए। -->
+
+    <h2 style="font-family: 'Arial', sans-serif;">Change Fonts</h2>
+
+    <h2 style="font-size: 50px;">Font Size</h2>
+
+    <h2 style="font-weight: normal;">Font Weight</h2>
+    <!-- font-weight => Specifies the weight (or boldness) of the font.
+    normal (default)
+    bold
+    bolder
+    lighter
+    100 to 900 -->
+
+    <h2 style="font-style: italic;">Font Style</h2>
+    <!-- font-style => Specifies the style of the font.
+    normal (default)
+    italic
+    oblique -->
+    
+    <h2 style="font-variant: small-caps;">This Is Dog</h2>
+    <!-- font-variant CSS प्रॉपर्टी का उपयोग टेक्स्ट को छोटे कैपिटल अक्षरों (small caps) में प्रदर्शित करने के लिए किया जाता है। छोटे कैपिटल अक्षर वे अक्षर होते हैं जो सामान्य कैपिटल अक्षरों के समान होते हैं, लेकिन उनकी ऊँचाई छोटी होती है, जैसे छोटे अक्षरों की ऊँचाई।
+    value: यह निम्नलिखित मानों में से एक हो सकता है:
+    normal: टेक्स्ट को सामान्य फॉर्मेट में प्रदर्शित करता है (डिफ़ॉल्ट मान)।
+    small-caps: टेक्स्ट को छोटे कैपिटल अक्षरों में प्रदर्शित करता है। -->
+
+    <h2 style="direction: rtl;">Change Direction</h2>
+    <!-- direction => Sets the direction of the text.
+    ltr (left-to-right, default)
+    rtl (right-to-left) -->
+
+    <h2 style="direction: rtl; unicode-bidi: bidi-override;">Unicode Bidi (Bidi Override)</h2>
+    <h2 style="direction: rtl; unicode-bidi: embed;">Unicode Bidi (Emded)</h2>
+    <h2 style="direction: rtl; unicode-bidi: normal;">Unicode Bidi(Normal)</h2>
+    <!-- unicode-bidi प्रॉपर्टी का उपयोग:
+
+    unicode-bidi प्रॉपर्टी का उपयोग HTML तत्वों में टेक्स्ट की दिशा को बदलने के लिए किया जाता है। यह विशेष रूप से उपयोगी है जब आपके पास एक ही टेक्स्ट ब्लॉक में विभिन्न दिशाओं (जैसे बाएं से दाएं और दाएं से बाएं) के टेक्स्ट होते हैं। यह प्रॉपर्टी तब प्रभावी होती है जब इसे direction प्रॉपर्टी के साथ उपयोग किया जाता है।
+    
+    प्रॉपर्टी वैल्यू:
+    normal: डिफ़ॉल्ट वैल्यू, टेक्स्ट को सामान्य दिशा में प्रदर्शित करता है।
+    embed: एक नया एम्बेडेड बिडि (bidirectional) संदर्भ शुरू करता है।
+    bidi-override: टेक्स्ट की दिशा को ओवरराइड करता है, direction प्रॉपर्टी का अनुसरण करता है। -->
+
+    <h2 style="text-align-last: right;">Text align last</h2>
+    <!-- text-align-last प्रॉपर्टी:
+
+    text-align-last प्रॉपर्टी का उपयोग एक ब्लॉक या इनलाइन-ब्लॉक एलिमेंट की आखिरी लाइन के टेक्स्ट के संरेखण (alignment) को निर्धारित करने के लिए किया जाता है। यह तब उपयोगी होता है जब आप चाहते हैं कि पैराग्राफ की आखिरी लाइन का संरेखण बाकी टेक्स्ट से अलग हो।
+
+    Sets the alignment of the last line of text.
+    auto (default)
+    left
+    right
+    center
+    justify -->
+
+    <h2 style="text-justify: inter-word;">Here is some text that we have justified. It uses spaces between words and characters to evenly spread the text between lines.</h2>
+    <!-- जस्टीफ़ाई का मतलब होता है किसी चीज़ को समान रूप से बाँटना। CSS में text-justify प्रॉपर्टी का उपयोग टेक्स्ट को लाइनों के बीच समान रूप से फैलाने के लिए किया जाता है। इससे पाठ को पंक्तियों के अंत में समान रूप से रखा जा सकता है, जिससे टेक्स्ट की शैली और सामर्थ्य बेहतर बनते हैं।
+    Specifies the justification method of text when text-align is set to justify.
+    auto (default)
+    none
+    inter-word
+    inter-character
+    distribute -->
+
+    <h2 style="writing-mode: vertical-rl;">Writing Mode</h2>
+    <!-- writing-mode => Defines whether lines of text are laid out horizontally or vertically and the direction in which blocks progress.
+    horizontal-tb (default)
+    vertical-rl
+    vertical-lr -->
+
+    <div style="writing-mode: vertical-rl; /* Sets the text direction to vertical right-to-left */
+    text-orientation: upright; /* Displays characters upright */
+    border: 1px solid black;
+    height: 200px;
+    width: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    ">This is an example of vertically oriented text.</div>
+    <!-- text-orientation in CSS:
+    The text-orientation property in CSS is used to define the orientation of text in a block or inline element. It is especially useful for vertical writing modes. This property allows text to be displayed vertically and oriented in different ways, which is particularly useful for East Asian typography.
+    HINDI : CSS में text-orientation प्रॉपर्टी का उपयोग किसी ब्लॉक या इनलाइन एलिमेंट में टेक्स्ट की दिशा को निर्दिष्ट करने के लिए किया जाता है। यह विशेष रूप से वर्टिकल राइटिंग मोड्स (ऊर्ध्वाधर लेखन मोड्स) के लिए उपयोगी है। यह प्रॉपर्टी टेक्स्ट को वर्टिकल रूप से दिखाने और विभिन्न तरीकों से ओरिएंट करने की अनुमति देती है, जो पूर्व एशियाई टाइपोग्राफी के लिए विशेष रूप से उपयोगी है।
+    value: संभव मान हैं:
+    mixed: डिफ़ॉल्ट मान। क्षैतिज लेखन मोड में टेक्स्ट क्षैतिज रहता है, जबकि ऊर्ध्वाधर लेखन मोड में टेक्स्ट मिक्स हो सकता है।
+    upright: सभी अक्षर सीधे सेट होते हैं, जिसमें लैटिन-आधारित स्क्रिप्ट भी शामिल हैं।
+    sideways: टेक्स्ट को क्षैतिज रूप से रखा जाता है लेकिन 90 डिग्री घड़ी की दिशा में घुमाया जाता है।
+    sideways-right: sideways के समान, लेकिन टेक्स्ट को 90 डिग्री घड़ी की विपरीत दिशा में घुमाता है।
+    use-glyph-orientation: डिप्रिकेटेड, यह glyph-orientation-vertical प्रॉपर्टी का उपयोग करता है। -->
+
+    <div style="word-break: normal;
+                width: 150px;
+                border: 1px solid black;">Thisisaverylongwordwithoutspaces.</div>
+
+    <div style="word-break: break-all;
+                width: 150px;
+                border: 1px solid black;">Thisisaverylongwordwithoutspaces.</div>
+
+    <div style="word-break: keep-all;
+                width: 150px;
+                border: 1px solid black;">Thisisaverylongwordwithoutspaces.</div>
+
+    <div style="word-break: break-word;
+                width: 150px;
+                border: 1px solid black;">Thisisaverylongwordwithoutspaces.</div>
+    <!-- The word-break property in CSS is used to specify how words should break or wrap when they reach the end of a line. This is particularly useful for handling long words or URLs that don't fit within the container's width.
+    HINDI : word-break प्रॉपर्टी का उपयोग CSS में यह निर्धारित करने के लिए किया जाता है कि शब्दों को लाइन के अंत में कैसे तोड़ा या लपेटा जाए। यह विशेष रूप से तब उपयोगी होता है जब लंबे शब्द या URLs कंटेनर की चौड़ाई में फिट नहीं होते।
+    normal: डिफ़ॉल्ट मान। शब्द सामान्य नियमों के अनुसार टूटेंगे।
+    break-all: शब्दों को ओवरफ्लो को रोकने के लिए किसी भी चरित्र पर तोड़ा जा सकता है।
+    keep-all: केवल अनुमत ब्रेक पॉइंट्स (जैसे, स्पेस या हाइफन) पर ही टूटेगा, विशेषकर चीनी, जापानी, और कोरियाई भाषाओं में।
+    break-word: शब्द सामान्य बिंदुओं पर टूटेंगे, और यदि कोई शब्द कंटेनर में फिट होने के लिए बहुत लंबा है, तो यह किसी भी बिंदु पर टूट जाएगा। -->
+
+    <div style="width: 200px;
+                border: 1px solid black;
+                overflow-wrap: break-word;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                ">ThisIsAVeryLongWordThatWouldNormallyOverflowItsContainerButWithOverflowWrapItWillBeakAndFitWithinTheBox.</div>
+    <!-- Specifies whether the browser should insert line breaks within words to prevent text from overflowing its content box.
+    The overflow-wrap property in CSS is used to specify whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its container. This is particularly useful for handling long words or URLs that might otherwise cause layout issues.
+    HINDI : overflow-wrap प्रॉपर्टी का उपयोग यह निर्दिष्ट करने के लिए किया जाता है कि ब्राउज़र को एक लंबे शब्द या स्ट्रिंग को तोड़कर नई लाइन में डालना चाहिए या नहीं, ताकि टेक्स्ट उसके कंटेनर से बाहर न जाए। यह लंबे शब्दों या URLs को संभालने के लिए विशेष रूप से उपयोगी है जो अन्यथा लेआउट समस्याएं पैदा कर सकते हैं।
+    value: यह normal, break-word, या anywhere हो सकता है।
+    normal: लाइन्स केवल सामान्य शब्द ब्रेक पॉइंट्स (जैसे, स्पेस, हाइफन) पर ही टूटेंगी।
+    break-word: लाइन्स शब्दों के बीच में भी टूट सकती हैं यदि आवश्यक हो ताकि ओवरफ्लो को रोका जा सके।
+    anywhere: लाइन्स कहीं भी टूट सकती हैं, यहाँ तक कि शब्दों के बीच में भी, ताकि ओवरफ्लो को रोका जा सके। -->
+
+    <div style="hyphens: auto;
+                width: 200px;
+                border: 1px solid black;">
+        This is an example of a paragraph with automatic hyphenation. The text will break words with hyphens when necessary.
+    </div>
+    <div style="hyphens: none;
+                width: 200px;
+                border: 1px solid black;">
+        This is an example of a paragraph with no hyphenation. The text will not break words with hyphens.
+    </div>
+    <!-- The hyphens property in CSS controls whether hyphenation is applied to the text. Hyphenation is the process of breaking words between lines with a hyphen (-) to improve text flow and readability, especially in justified text.
+    HINDI : CSS में hyphens प्रॉपर्टी का उपयोग यह नियंत्रित करने के लिए किया जाता है कि क्या टेक्स्ट में हाइफ़नेशन (शब्दों को हाइफ़न (-) के साथ तोड़ना) लागू होता है। हाइफ़नेशन का उपयोग विशेष रूप से जस्टीफ़ाइड टेक्स्ट में टेक्स्ट फ्लो और पठनीयता को सुधारने के लिए किया जाता है।
+    value: इसमें none, manual, या auto हो सकता है।
+
+    none: कोई हाइफ़नेशन नहीं। शब्दों को लाइन ब्रेक पर नहीं तोड़ा जाएगा।
+    manual: केवल वहां हाइफ़नेशन लागू होती है जहां हाइफ़न करैक्टर (­) स्पष्ट रूप से डाला गया हो।
+    auto: ब्राउज़र स्वचालित रूप से भाषा के नियमों के अनुसार हाइफ़नेशन लागू करता है। -->
+
+    <pre style="tab-size: 4;">
+        function example() {
+            let x = 1;
+            let y = 2;
+            console.log(x + y);
+        }
+    </pre>
+    <!-- The tab-size property in CSS is used to specify the width of the tab character in a text. This is especially useful when dealing with preformatted text (such as code snippets) where tab characters are used for indentation
+    HINDI : CSS में tab-size प्रॉपर्टी का उपयोग टैब कैरेक्टर की चौड़ाई को निर्दिष्ट करने के लिए किया जाता है। यह विशेष रूप से पूर्व-स्वरूपित टेक्स्ट (जैसे कोड स्निपेट) में उपयोगी होता है, जहाँ इंडेंटेशन के लिए टैब कैरेक्टर का उपयोग किया जाता है।
+    value: यह एक लंबाई (जैसे, 4px, 2em) या स्पेस की संख्या को दर्शाने वाला एक संख्या (जैसे, 4) हो सकता है। -->
+
+
+</body>
+</html>
