@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Image Properties Example</title>
+    <style>
+        body {
+            background-image: url("background.jpg"); /* Image path should be correct */
+            background-repeat: no-repeat; /* Image will not repeat */
+            background-position: center; /* Image will be centered */
+            background-size: cover; /* Image will cover the entire element */
+            background-attachment: fixed; /* Image will be fixed during scroll */
+            background-clip: padding-box; /* Background will be clipped to padding box */
+            background-origin: border-box; /* Background positioning area will be border box */
+            background-blend-mode: multiply; /* Background image will blend with background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #webName{
+            font-family:sans-serif;
+            font-size: 150px;
+            font-weight: bold;
+            border: 2px solid white;
+            color: white;
+            margin-top: 225px;
+            padding: 25px;
+
+            
+
+        }
+
+        
+
+    </style>
+</head>
+<body>
+     <div id="webName">mrzubair.in</div>
+</body>
+</html>
+
+
+<!-- 
+CSS में background-image प्रॉपर्टी का उपयोग किसी तत्व के बैकग्राउंड में एक इमेज सेट करने के लिए किया जाता है। इस प्रॉपर्टी के साथ अन्य प्रॉपर्टीज़ का उपयोग करके, आप इमेज का रिपीटेशन, पोजिशनिंग, साइजिंग, और अटैचमेंट कंट्रोल कर सकते हैं। यहाँ पर सभी बैकग्राउंड इमेज प्रॉपर्टीज़ का विवरण और उदाहरण हिंदी और अंग्रेजी (हिंग्लिश) में दिया गया है:
+
+Background Properties in Hinglish with Example
+background-image:
+
+Description (विवरण): इस प्रॉपर्टी का उपयोग किसी इमेज को बैकग्राउंड में सेट करने के लिए किया जाता है।
+Example (उदाहरण):
+css
+Copy code
+body {
+    background-image: url("background.jpg");
+}
+background-repeat:
+
+Description (विवरण): यह प्रॉपर्टी बैकग्राउंड इमेज को कैसे रिपीट किया जाए, उसे कंट्रोल करती है।
+Values (मान):
+repeat: इमेज को दोनों दिशाओं में रिपीट करता है (डिफॉल्ट सेटिंग)।
+no-repeat: इमेज को रिपीट नहीं करता।
+repeat-x: इमेज को केवल हॉरिजॉन्टली रिपीट करता है।
+repeat-y: इमेज को केवल वर्टिकली रिपीट करता है।
+Example (उदाहरण):
+css
+Copy code
+body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+}
+background-position:
+
+Description (विवरण): यह प्रॉपर्टी इमेज की पोजिशन को सेट करती है।
+Values (मान):
+Keywords: left, center, right, top, bottom
+Coordinates: x% y% or xpos ypos
+Example (उदाहरण):
+css
+Copy code
+body {
+    background-image: url("background.jpg");
+    background-position: center;
+}
+background-size:
+
+Description (विवरण): यह प्रॉपर्टी इमेज के साइज को कंट्रोल करती है।
+Values (मान):
+auto: इमेज का ओरिजिनल साइज।
+cover: इमेज को पूरे तत्व को कवर करने के लिए स्केल करता है।
+contain: इमेज को तत्व के भीतर फिट करने के लिए स्केल करता है।
+Specific sizes: width height (e.g., 100px 50px)
+Example (उदाहरण):
+css
+Copy code
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+background-attachment:
+
+Description (विवरण): यह प्रॉपर्टी बैकग्राउंड इमेज के स्क्रॉल व्यवहार को कंट्रोल करती है।
+Values (मान):
+scroll: इमेज स्क्रॉल के साथ मूव करती है (डिफॉल्ट सेटिंग)।
+fixed: इमेज फिक्स्ड रहती है।
+local: इमेज स्क्रॉल के साथ तत्व के कॉन्टेंट के अनुसार मूव करती है।
+Example (उदाहरण):
+css
+Copy code
+body {
+    background-image: url("background.jpg");
+    background-attachment: fixed;
+}
+background-clip:
+
+Description (विवरण): यह प्रॉपर्टी बैकग्राउंड पेंटिंग क्षेत्र को सेट करती है।
+Values (मान):
+border-box: बॉर्डर बॉक्स के भीतर।
+padding-box: पैडिंग बॉक्स के भीतर।
+content-box: कॉन्टेंट बॉक्स के भीतर।
+Example (उदाहरण):
+css
+Copy code
+body {
+    background-image: url("background.jpg");
+    background-clip: padding-box;
+}
+background-origin:
+
+Description (विवरण): यह प्रॉपर्टी बैकग्राउंड इमेज की पोजिशनिंग एरिया को सेट करती है।
+Values (मान):
+border-box: बॉर्डर बॉक्स से।
+padding-box: पैडिंग बॉक्स से।
+content-box: कॉन्टेंट बॉक्स से।
+Example (उदाहरण):
+css
+Copy code
+body {
+    background-image: url("background.jpg");
+    background-origin: border-box;
+}
+background-blend-mode:
+
+Description (विवरण): यह प्रॉपर्टी बैकग्राउंड लेयर्स को कैसे ब्लेंड किया जाए, उसे सेट करती है।
+Values (मान):
+normal, multiply, screen, overlay, etc.
+Example (उदाहरण):
+css
+Copy code
+body {
+    background-image: url("background.jpg");
+    background-blend-mode: multiply;
+}
+-->
