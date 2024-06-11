@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inline Display Example</title>
+  <style>
+    *{
+        margin-top: 10px;
+    }
+
+    /* display: inline;
+       inline मान का उपयोग उन तत्वों के लिए किया जाता है जो लाइन के भीतर ही रखे जाते हैं और उनके ऊपर/नीचे कोई नया ब्लॉक नहीं बनता है। ये केवल उतनी चौड़ाई घेरते हैं जितना उनके सामग्री की जरूरत होती है। */
+    .inline-example {
+      display: inline;
+      background-color: lightblue;
+    }
+    /* 
+    visibility: hidden; एक CSS प्रॉपर्टी है जिसका उपयोग किसी तत्व को छिपाने के लिए किया जाता है, लेकिन यह तत्व पेज पर अपने स्थान को बरकरार रखता है। इसका मतलब है कि यह दृश्य में नहीं होता, लेकिन इसका स्थान अन्य तत्वों द्वारा घेरा जाता है।
+    इस प्रकार, आप देख सकते हैं कि visibility: hidden; के उपयोग से तत्व दृश्य नहीं होता, लेकिन उसके लिए पेज पर स्थान आरक्षित रहता है।
+    */
+    .hidden-element {
+      visibility: hidden;
+      background-color: lightcoral;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+    
+    /* display: block;
+       block मान का उपयोग उन तत्वों के लिए किया जाता है जो हमेशा नई लाइन पर शुरू होते हैं और पूरे उपलब्ध चौड़ाई को घेरते हैं। */
+    .block-example {
+      display: block;
+      background-color: lightgreen;
+    }
+    
+    /* display: inline-block;
+       inline-block मान inline और block दोनों का संयोजन है। यह inline की तरह होता है लेकिन block की तरह ऊँचाई और चौड़ाई सेट कर सकते हैं। */
+    .inline-block-example {
+      display: inline-block;
+      background-color: lightcoral;
+      width: 150px;
+      height: 100px;
+    }
+    
+    /* display: none;
+       none मान का उपयोग उस तत्व को छिपाने के लिए किया जाता है। इस मान के साथ, तत्व पेज पर प्रदर्शित नहीं होता और उसके लिए कोई स्थान भी नहीं घेरता। */
+    .none-example {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <span class="inline-example">This is inline</span>
+  <span class="inline-example">Another inline</span>
+  
+  <div class="hidden-element">This is hidden element</div>
+
+  <div class="block-example">This is block</div>
+  <div class="block-example">Another block।</div>
+
+  <span class="inline-block-example">This is inline-block।</span>
+  <span class="inline-block-example">Another inline-block</span>
+
+  <div class="none-example">This is hidden element</div>
+</body>
+</html>
