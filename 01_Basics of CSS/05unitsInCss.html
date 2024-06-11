@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* em का मतलब है कि यह यूनिट उस तत्व के फॉन्ट साइज के सापेक्ष होती है। */
+        .box1 {
+            font-size: 16px; /* आधार फॉन्ट साइज */
+            width: 10em; /* 10 * 16px = 160px चौड़ाई */
+            height: 5em; /* 5 * 16px = 80px ऊँचाई */
+            background-color: lightblue;
+        }
+
+        html {
+            font-size: 16px; /* आधार फॉन्ट साइज */
+        }
+        /* rem का मतलब है कि यह यूनिट रूट एलिमेंट (<html>) के फॉन्ट साइज के सापेक्ष होती है। */
+        .box2 {
+            width: 10rem; /* 10 * 16px = 160px चौड़ाई */
+            height: 5rem; /* 5 * 16px = 80px ऊँचाई */
+            background-color: lightgreen;
+        }
+
+        .parent {
+            width: 100%; /* पूरी चौड़ाई */
+            height: 200px;
+            background-color: lightgray;
+        }
+
+        /* % का मतलब है कि यह यूनिट उसके पैरेंट एलिमेंट के सापेक्ष होती है। */
+        .box3 {
+            width: 50%; /* कंटेनर की आधी चौड़ाई */
+            height: 100px;
+            background-color: lightcoral;
+        }
+        
+        /* vw यूनिट का मतलब है कि यह व्यूपोर्ट की चौड़ाई का प्रतिशत होता है। 1vw = 1% व्यूपोर्ट चौड़ाई। */
+        .box4 {
+            width: 50vw; /* व्यूपोर्ट चौड़ाई का 50% */
+            height: 50px;
+            background-color: rgb(242, 16, 76);
+        }
+        
+        /* vh यूनिट का मतलब है कि यह व्यूपोर्ट की ऊँचाई का प्रतिशत होता है। 1vh = 1% व्यूपोर्ट ऊँचाई। */
+        .box5 {
+            height: 50vh; /* व्यूपोर्ट ऊँचाई का 50% */
+            width: 100%;
+            background-color: rgb(255, 255, 15);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">em example</div>
+    <div class="box2">rem example</div>
+    <div class="parent">
+      <div class="box3">% example</div>
+    </div>
+    <div class="box4">vw example</div>
+    <div class="box5">vh example</div>
+
+</body>
+</html>
