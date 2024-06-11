@@ -1,0 +1,54 @@
+<!-- 
+जेड-इंडेक्स (z-index) CSS में एक प्रॉपर्टी है जो तत्वों को पृष्ठ पर स्थानित करने के क्रम को निर्धारित करती है। यह प्रॉपर्टी केवल उन तत्वों पर काम करती है जिनकी स्थानिक प्रॉपर्टी (position property) की मान अन्य कोई भी निर्धारित नहीं की गई है।
+
+यदि दो तत्वों का z-index मान अलग-अलग है, तो जो तत्व अधिक z-index मान रखता है, वह उपरवाले तत्व के ऊपर आएगा।
+-->
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>जेड-इंडेक्स (z-index) का उदाहरण</title>
+  <style>
+    .red-box {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      left: 50px;
+      top: 50px;
+      z-index: 1; /* जेड-इंडेक्स मान दें */
+    }
+
+    .blue-box {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      left: 100px;
+      top: 100px;
+      z-index: 2; /* जेड-इंडेक्स मान दें */
+    }
+
+    .green-box {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: green;
+      left: 150px;
+      top: 150px;
+      z-index: 3; /* जेड-इंडेक्स मान दें */
+    }
+  </style>
+</head>
+<body>
+  <div class="red-box"></div>
+  <div class="blue-box"></div>
+  <div class="green-box"></div>
+</body>
+</html>
+
+<!-- 
+इस उदाहरण में, हर तत्व का जेड-इंडेक्स मान अलग है। .red-box का जेड-इंडेक्स 1 है, .blue-box का 2 है, और .green-box का 3 है। इसलिए, .green-box वाला तत्व सबसे ऊपर में होगा, फिर .blue-box वाला तत्व, और अंत में .red-box वाला तत्व।
+-->
