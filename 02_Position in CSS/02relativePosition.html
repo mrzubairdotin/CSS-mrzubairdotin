@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Position Example</title>
+    <style>
+        .container {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            position: relative; /* Important for context */
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: relative; /* This element is relatively positioned */
+            top: 82px; /* Moves 20px down from its original position */
+            left: 60px; /* Moves 30px right from its original position */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
+
+<!-- 
+रिलेटिव पोज़िशनिंग का उपयोग करते समय, तत्व अपनी सामान्य स्थिति से संबंधित होता है। यह अब भी उसी स्थान पर रहेगा, जहाँ यह स्वाभाविक रूप से होता, लेकिन आप इसे ऊपर, नीचे, बाएँ या दाएँ हिला सकते हैं। इसकी स्थानांतरित स्थिति के कारण बाकी तत्वों पर कोई प्रभाव नहीं पड़ेगा, क्योंकि यह अपने सामान्य स्थान पर ही स्थान छोड़ता है।
+-->
