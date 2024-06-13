@@ -1,0 +1,83 @@
+<!-- 
+The flex-wrap property in CSS is used in conjunction with the display: flex declaration to control the wrapping behavior of the flex items within a flex container. When you use display: flex on a container, its child elements become flex items that are laid out along the main axis. By default, these flex items are laid out in a single line, and they will overflow the container if they exceed its width.
+
+The flex-wrap property allows you to specify whether the flex items should wrap onto multiple lines if they overflow the container, and how they should behave in such cases.
+flex-wrap प्रॉपर्टी CSS में उपयोग की जाती है जब आप display: flex का उपयोग करके एक कंटेनर को फ्लेक्स कंटेनर बनाते हैं। यह प्रॉपर्टी नियंत्रित करती है कि फ्लेक्स आइटम्स (फ्लेक्स कंटेनर के बच्चे) कंटेनर में कैसे व्यवस्थित होंगे। डिफ़ॉल्ट रूप से, ये आइटम एक ही लाइन में होते हैं और यदि वे कंटेनर की चौड़ाई से अधिक हो जाते हैं, तो वे ओवरफ्लो हो जाते हैं।
+
+flex-wrap प्रॉपर्टी तीन मानों को स्वीकार करती है:
+
+nowrap (डिफ़ॉल्ट): फ्लेक्स आइटम्स एक ही लाइन में रहते हैं और यदि आवश्यक हो, तो वे कंटेनर को ओवरफ्लो कर देंगे।
+
+wrap:फ्लेक्स आइटम्स कंटेनर की चौड़ाई से अधिक होने पर कई लाइनों में लिपट जाएंगे।
+आइटम्स ऊपर से नीचे की ओर व्यवस्थित होते हैं।
+
+wrap-reverse:फ्लेक्स आइटम्स कंटेनर की चौड़ाई से अधिक होने पर कई लाइनों में लिपट जाएंगे।
+आइटम्स नीचे से ऊपर की ओर व्यवस्थित होते हैं।
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    .noWrap {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: lightgrey;
+    }
+    .item {
+        width: 300px;
+        height: 100px;
+        margin: 10px;
+        background-color: cornflowerblue;
+    }
+
+    .Wrap {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: lightgrey;
+        margin-top: 20px;
+    }
+
+    .flexRevere {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        background-color: lightgray;
+        margin: 10px;
+    }
+
+</style>
+</head>
+<body>
+<h1>No Wrap</h1>
+<div class="noWrap">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+</div>
+
+<h1>Wrap</h1>
+<div class="Wrap">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+</div>
+
+<h1>Wrap Reverse</h1>
+<div class="flexRevere">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+</div>
+
+
+</body>
+</html>
+
