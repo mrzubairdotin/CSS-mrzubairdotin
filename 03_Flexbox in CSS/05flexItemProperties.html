@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Item Properties</title>
+    <style>
+        
+        div {
+            margin: 25px;
+        }
+        .container {
+            height: 300px;
+            width: 500px;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+        }
+
+        .box1 {
+            width: 75px;
+            height: 75px;
+            background-color: lightcoral;
+            border-radius: 50%;
+
+        }
+
+        .box2 {
+            width: 75px;
+            height: 75px;
+            background-color: lightcoral;
+            border-radius: 50%;
+            align-self: self-end; /* ab ye item yha per tha uske and me aajayega or eshi high periroty hoti ha*/
+
+
+        }
+        .box3 {
+            width: 75px;
+            height: 75px;
+            background-color: lightcoral;
+            border-radius: 50%;
+
+
+        }
+
+        .growPro {
+            width: 600px;
+            height: 300px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+
+        .shrink {
+            width: 600px;
+            height: 300px;
+            border: 2px solid black;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .shr {
+            width: 300px;
+            height: 100px;
+            background-color: blue;
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+
+    <h1>Align Self</h1>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+    <h1>Flex Grow</h1>
+    <div class="growPro">
+        <div class="item" style="flex-grow: 1;">Item 1</div>
+        <div class="item" style="flex-grow: 2;">Item 2</div>
+        <div class="item" style="flex-grow: 1;">Item 3</div>
+    </div>
+    
+    <h1>Flex Shrink</h1>
+    <div class="shrink">
+        <div class="shr" style="flex-shrink: 1;">Item 1</div>
+        <div class="shr" style="flex-shrink: 2;">Item 2</div>
+        <div class="shr" style="flex-shrink: 1;">Item 3</div>
+    </div>
+
+
+</body>
+</html>
+
+<!-- 
+CSS में align-self एक प्रॉपर्टी है जो किसी individual flex item (जैसे कि एक div) को अपने flex container के अंदर अलग तरीके से align करने के लिए उपयोग होती है। इसका उपयोग तब होता है जब आप किसी एक item को flex container में बाकी items से अलग तरीके से position करना चाहते हैं।
+
+----------------------------
+
+
+CSS में flex-grow एक प्रॉपर्टी है जो यह बताती है कि एक flex item (जैसे कि div, span आदि) कितना बड़ा होगा जब उसके पास extra space हो। इसे एक साधारण उदाहरण से समझते हैं:
+
+मान लीजिए आपके पास तीन डिब्बे (div) हैं जो एक पंक्ति में रखे गए हैं और आप चाहते हैं कि ये डिब्बे उपलब्ध स्पेस के अनुसार फैलें।
+
+<div class="container">
+  <div class="box" style="flex-grow: 1;">Box 1</div>
+  <div class="box" style="flex-grow: 2;">Box 2</div>
+  <div class="box" style="flex-grow: 1;">Box 3</div>
+</div>
+और CSS:
+.container {
+  display: flex;
+}
+.box {
+  border: 1px solid black;
+  padding: 10px;
+}
+इस उदाहरण में, Box 1, Box 2, और Box 3 एक ही पंक्ति में होंगे। अब, flex-grow प्रॉपर्टी के अनुसार:
+
+Box 1 और Box 3 का flex-grow 1 है।
+Box 2 का flex-grow 2 है।
+इसका मतलब यह हुआ कि यदि आपके पास अतिरिक्त स्पेस है (जो इन डिब्बों को सही आकार देने के बाद बचता है), तो:
+
+Box 1 और Box 3 1 यूनिट स्पेस लेंगे।
+Box 2 2 यूनिट स्पेस लेगा।
+इसलिए, अगर अतिरिक्त स्पेस 4 यूनिट है, तो Box 1 और Box 3 1-1 यूनिट लेंगे और Box 2 2 यूनिट लेगा। इस प्रकार, Box 2 सबसे बड़ा होगा।
+
+---------------------------
+
+
+CSS में flex-shrink एक प्रॉपर्टी है जो यह निर्धारित करती है कि जब एक flex container में कम जगह हो तो एक flex item कितना सिकुड़ेगा। इसे एक साधारण उदाहरण से समझते हैं:
+
+मान लीजिए आपके पास तीन डिब्बे (div) हैं जो एक पंक्ति में रखे गए हैं और आप चाहते हैं कि ये डिब्बे तब सिकुड़ें जब उनके पास कम स्पेस हो।
+
+
+<div class="container">
+  <div class="box" style="flex-shrink: 1;">Box 1</div>
+  <div class="box" style="flex-shrink: 2;">Box 2</div>
+  <div class="box" style="flex-shrink: 1;">Box 3</div>
+</div>
+और CSS:
+
+.container {
+  display: flex;
+  width: 300px; /* Container की चौड़ाई 300px */
+}
+.box {
+  border: 1px solid black;
+  padding: 10px;
+  width: 150px; /* हर डिब्बे की चौड़ाई 150px */
+}
+इस उदाहरण में, Box 1, Box 2, और Box 3 एक ही पंक्ति में होंगे। अब, flex-shrink प्रॉपर्टी के अनुसार:
+
+Box 1 और Box 3 का flex-shrink 1 है।
+Box 2 का flex-shrink 2 है।
+इसका मतलब यह हुआ कि यदि आपके पास स्पेस कम है (क्योंकि हर डिब्बा 150px है और container केवल 300px चौड़ा है), तो:
+
+Box 1 और Box 3 1 यूनिट सिकुड़ेंगे।
+Box 2 2 यूनिट सिकुड़ेगा।
+इसलिए, अगर container में कुल 450px की जगह चाहिए (150px x 3) लेकिन सिर्फ 300px है, तो 150px की कमी है जिसे सभी डिब्बों के बीच बाँटना है।
+
+Box 1 और Box 3 एक-एक यूनिट सिकुड़ेंगे और Box 2 दो यूनिट सिकुड़ेगा। अगर यह एक यूनिट 50px की हो तो:
+
+Box 1 और Box 3 50px सिकुड़ेंगे, मतलब वे 100px के हो जाएंगे।
+Box 2 100px सिकुड़ेगा, मतलब वह 50px का हो जाएगा।
+इस तरह flex-shrink काम करता है, जिससे यह निर्धारित होता है कि कौन सा डिब्बा कितना सिकुड़ेगा जब स्पेस कम हो।
+-->
